@@ -65,7 +65,7 @@ tidy(score_bty_fit)
 2. Plot the data again using `geom_jitter()`, and add the regression line.
 
 ```{r viz-score_bty_fit,eval=FALSE}
-ggplot(data = score_bty_fit,
+ggplot(data = evals,
        mapping = aes( x = score, y = bty_avg)) +
   geom_jitter() +
   geom_smooth(method = "lm",
