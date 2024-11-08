@@ -24,18 +24,26 @@ evals<-read.csv("data/evals.csv", row.names=1)
 1.  Visualize the distribution of `score` in the dataframe `evals`.
 
 ```{r viz-score}
-# add code here
+ggplot(data = evals,
+       mapping = aes(x = score)) +
+  geom_histogram( binwidth = 0.3)
 ```
 
-*Add your other details and narratives here.*
+*jhxjsuh*
 
 2.  Visualize and describe the relationship between `score` and `bty_avg` using `geom_point()` to represent the data. 
 
 ```{r scatterplot}
-# add code here
+ggplot(data = evals, 
+       mapping = aes(x = score, y = bty_avg)) +
+  geom_point()
+
+ggplot(data = evals,
+       mapping = aes(x = score, y = bty_avg)) +
+  geom_jitter()
 ```
 
-*Add your narrative and other details here.*
+*they both look a mess.*
 
 # Exercise 2: Simple Linear regression with a numerical predictor
 
